@@ -7,11 +7,11 @@ var wptChrome = {
   testedURL : null,
   init : function(){
     this.serverURL = "https://www.webpagetest.org/getLocations.php?f=json&k="+this.apiKey;
-    this.runTestURL = "http://www.webpagetest.org/runtest.php?k="+this.apiKey+"&";
+    this.runTestURL = "https://www.webpagetest.org/runtest.php?k="+this.apiKey+"&";
   },
   setApiKey : function(wptApiKey){
     if(wptApiKey !== "undefined") this.apiKey = wptApiKey;
-  },
+  }, 
   setWptServers : function(wptServers){
     if(wptServers !== "undefined") this.wptServers = wptServers.split(',');
   },
