@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <meta name="description" content="">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+  <link rel="stylesheet" href="css/app.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <section class="section-intro" id="section-intro">
+      <img class="img-center img-responsive" width="100px" src="icon.png" />
+      <p class="u-txtCenter">
+        Check if this page can be a good lead the the Mobile Transformation Team. This extension will run a test on this page to check his mobile speed.
+      </p>
+    </section>
+
+
+    <h1 class="u-txtCenter">
+      <i class="material-icons big-icon icon-ok lead-ok" id="icon-lead-ok">done</i>
+      <i class="material-icons big-icon icon-ko lead-ko" id="icon-lead-ko">pan_tool</i>
+      <span></span>
+    </h1>
+
+
+
+    <p class="u-txtCenter u-txtM u-mbm lead-ok"> This website has speed issues and seems to be <strong>a good lead for a mobile speed consultation</strong></p>
+    <p class="u-txtCenter u-txtM u-mbm lead-ko"> This website has no <strong>strong speed issue </strong> it's not a good lead</p>
+
+
+
+
+
+
+
+    <div class="row">
+      <form class="col s12 u-mtm">
+        <div class="row">
+        </div>
+      </form>
+    </div> <!-- row -->
+
+    <a href="" id="full-result" style="display:none" class="btn waves-effect waves-light" target="_blank">
+      view full results on WebPageTest.org
+      <i class="material-icons right">send</i>
+    </a>
+
+
+
+
+
+
+
+
+
+    <p id="status" class="u-txtCenter"></p>
+
+    <div class="preloader-wrapper small active img-center" id="ajax-loader">
+      <div class="spinner-layer spinner-green-only">
+        <div class="circle-clipper left">
+          <div class="circle"></div>
+        </div><div class="gap-patch">
+          <div class="circle"></div>
+        </div><div class="circle-clipper right">
+          <div class="circle"></div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</body>
+
+<script src="js/jquery.js"></script>
+<script src="js/materialize.js"></script>
+<script src="js/helpers.js"></script>
+<script src="js/app.js?v=1.1"></script>
+
+
+
+</html>
