@@ -1,0 +1,15 @@
+img {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+
+input{
+    height: 40px;
+    width: 300px;
+    max-width: 80%;
+    display: block;
+    margin: auto;
+    margin-bottom: 20px;
+}
