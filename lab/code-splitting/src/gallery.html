@@ -36,6 +36,29 @@
 				 alt="Gallery image 1" /></a>
 		</div>
 
+		<h3 class="txt-center"> The code used (Webpack4) : </h3>
+		<pre><code class="js">
+
+			
+// Let's check if we are on the image gallery page
+if (document.querySelector('.image-gallery')) {
+
+	// we dynamically import the module
+	import('simple-lightbox')
+		.then(sl => {
+
+		const SimpleLightbox = sl.default;
+
+		// the module is loaded and I can use it
+		new SimpleLightbox({
+			elements: '.image-gallery a'
+		});
+
+	});
+
+}
+		</code></pre>
+
 	</div> <!-- container -->
 
 </body>

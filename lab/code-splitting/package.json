@@ -40,6 +40,7 @@
     "webpack-manifest-plugin": "^2.0.4"
   },
   "dependencies": {
+    "highlight.js": "^9.13.1",
     "lodash": "^4.17.11",
     "simple-lightbox": "^2.1.0",
     "validator": "^10.8.0"

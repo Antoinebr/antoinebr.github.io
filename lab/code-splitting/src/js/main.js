@@ -2,6 +2,7 @@ import css from '@css/app.scss'
 import yop from '@css/yop.css'
 
 import SimpleLightboxCSS from '@css/lib/lightbox.css';
+import highlight from '@css/lib/highlight.css';
 
 
 // Let's check if we are on the image gallery page
@@ -43,5 +44,26 @@ if ($form) {
 
 	})();
 
+
+}
+
+
+
+const $code = document.querySelector('code');
+
+if($code){
+
+
+	// we dynamically import the module
+	(async () => {
+
+		let hljs = await import('highlight.js');
+
+		hljs = hljs.default;
+
+		hljs.initHighlightingOnLoad();
+		
+
+	})();
 
 }

@@ -32,7 +32,34 @@
 			<button class="display-block"> test </button>
 		</form>
 
+		<h3 class="txt-center"> The code used (Webpack4) : </h3>
+		<pre><code class="js">
 
+// Let's check if we are on the contact page
+const $form = document.querySelector('form');
+
+if ($form) {
+
+	// we dynamically import the module
+	(async () => {
+
+		const validator = await import('validator');
+
+		$form.addEventListener('submit', function(e){
+			
+			e.preventDefault();
+
+			alert(`Valid email ? ${validator.isEmail(document.querySelector('#email').value)} `);
+
+		})
+		
+
+	})();
+
+
+}
+				
+		</code></pre>
 
 
 
