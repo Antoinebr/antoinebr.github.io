@@ -7,7 +7,7 @@
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link href="app.2b0e6fd8f92539128f92.css" rel="stylesheet"></head>
+<link href="app.eac4aafdc7b264531184.css" rel="stylesheet"></head>
 
 <body>
 
@@ -32,13 +32,40 @@
 			<button class="display-block"> test </button>
 		</form>
 
+		<h3 class="txt-center"> The code used (Webpack4) : </h3>
+		<pre><code class="js">
 
+// Let's check if we are on the contact page
+const $form = document.querySelector('form');
+
+if ($form) {
+
+	// we dynamically import the module
+	(async () => {
+
+		const validator = await import('validator');
+
+		$form.addEventListener('submit', function(e){
+			
+			e.preventDefault();
+
+			alert(`Valid email ? ${validator.isEmail(document.querySelector('#email').value)} `);
+
+		})
+		
+
+	})();
+
+
+}
+				
+		</code></pre>
 
 
 
 	</div> <!-- container -->
 
-<script type="text/javascript" src="app.bundle.e668f0e91b137848c9c5.js"></script></body>
+<script type="text/javascript" src="app.bundle.3dae07668f463a6f184e.js"></script></body>
 
 
 
