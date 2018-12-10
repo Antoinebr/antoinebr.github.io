@@ -14,7 +14,6 @@
   }
   
   
-  /* latin */
   @font-face {
     font-family: 'SedgwickAve-Regular';
     font-style: normal;
@@ -22,6 +21,7 @@
     src: url(/font) format('woff');
     font-display: swap;
   }
+
   h2{
     font-family: 'SedgwickAve-Regular',sans-serif;
   }

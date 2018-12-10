@@ -33,6 +33,21 @@ app.get('/', function (req, res) {
 });
 
 
+app.get('/loader', function (req, res) {
+
+
+    let text = "";
+
+    for (let i = 0; i < 9; i++) text += "Lorem ipsum dolor sit met, qui at desert mandamus, adduce ullum apeirian mea at";
+
+    res.render('loader', {
+        text
+    });
+
+
+});
+
+
 app.get('/font', function (req, res) {
 
     setTimeout(() => {
