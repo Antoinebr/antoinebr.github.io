@@ -20,6 +20,12 @@ const updateCounter = (total, current) => {
     $counter.innerText = `${current} / ${total}`;
 }
 
+const addZeros = numToConvert => {
+    let num = numToConvert.toString();
+    if (num.length === 1) return '00' + num;
+    if (num.length === 2) return '0' + num;
+    return num;
+}
 
 const goBack = () => {
 
@@ -27,7 +33,7 @@ const goBack = () => {
 
     const curentMinus1 = (getImgNum(myImage) - 1 < firstImg) ? getLastImgNum(images) : getImgNum(myImage) - 1;
 
-    myImage.src = `./output${curentMinus1}.jpg`;
+    myImage.src = `./output${addZeros(curentMinus1)}.jpg`;
 
     updateCounter(images.length, curentMinus1);
 }
@@ -42,7 +48,7 @@ const goNext = () => {
         curentImgNumber = getFirstImgNum(images);
     }
 
-    myImage.src = `./output${curentImgNumber+1}.jpg`;
+    myImage.src = `./output${addZeros(curentImgNumber+1)}.jpg`;
 
     updateCounter(images.length, curentImgNumber + 1);
 
@@ -50,7 +56,7 @@ const goNext = () => {
 
 document.querySelector('.back').addEventListener('click', goBack);
 document.querySelector('.next').addEventListener('click', goNext);
-
+myImage.addEventListener('click',goNext);
 
 body.addEventListener('keydown', function (event) {
     if (event.key === "ArrowRight") goNext();
