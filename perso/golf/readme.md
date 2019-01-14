@@ -1,7 +1,7 @@
 ## Extract the frames
 
 ```
-ffmpeg -i VID_20190112_121009.mp4  -r 30/1 /Users/abrossault/Desktop/swing01/output%03d.jpg
+ffmpeg -i *.mp4  -ss 00:00:20  -r 30/1 /Users/abrossault/Desktop/fucked-up/output%03d.jpg
 ```
 
 ## Create an array 
