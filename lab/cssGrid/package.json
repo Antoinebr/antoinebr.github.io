@@ -1,0 +1,12 @@
+{
+  "name": "css-grid",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "php -S localhost:8765"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

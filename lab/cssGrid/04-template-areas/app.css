@@ -1,0 +1,47 @@
+.container {
+    height: 100%;
+    display: grid;
+    grid-gap: 3px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 40px auto 40px;
+    
+    /* 
+        Here I create a visual representation of my grid 
+        If I want a blank space I can just put a dot 
+
+        m = menu elemenet 
+        h = header 
+        c = content 
+        f = footer
+    */
+    grid-template-areas:
+        "m h h h h h h h h h h h"
+        "m c c c c c c c c c c c"
+        ". f f f f f f f f f f .";
+}
+
+@media only screen and (max-width: 768px) {
+
+    .container {
+        grid-template-areas:
+            "h h h h h h h h h h m m"
+            "c c c c c c c c c c c c"
+            "f f f f f f f f f f f f";
+    }
+}
+
+.header {
+    grid-area: h;
+}
+
+.menu {
+    grid-area: m;
+}
+
+.content {
+    grid-area: c;
+}
+
+.footer {
+    grid-area: f;
+}
