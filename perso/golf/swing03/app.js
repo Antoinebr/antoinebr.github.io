@@ -4,9 +4,44 @@ const images = ["output001.jpg", "output002.jpg", "output003.jpg", "output004.jp
 const body = document.querySelector('body');
 const $counter = document.querySelector('.counter');
 
+const loadAllTheFrames = () => {
+    const imgPromises = [];
+    for (const image of images) {
+        imgPromises.push(fetch(`./${image}`));
+    }
+
+    return Promise.all(imgPromises);
+}
+
+
 var myImage = new Image(1080, 1920);
-myImage.src = images[0];
-document.body.appendChild(myImage);
+
+const $loader = document.querySelector('.loader');
+
+loadAllTheFrames()
+    .then(() => {
+
+        console.log('All images are loaded');
+
+        $loader.style.display = "none";
+
+        myImage.src = images[0];
+        document.body.appendChild(myImage);
+
+    })
+    .catch((e) => {
+
+        $loader.style.display = "none";
+
+        const element = document.createElement('p')
+        element.innerHTML = `Something went wrong <small>${e}</small>`;
+        document.body.appendChild(element);
+
+        console.log('Error when preloading the images');
+    });
+
+
+
 
 
 const getImgNum = instance => parseInt(instance.src.replace('output', '').replace('.jpg', '').replace(`${document.location.origin}${document.location.pathname}`, ''));
@@ -19,6 +54,11 @@ const getFirstImgNum = array => parseInt(array[0].replace('output', '').replace(
 const updateCounter = (total, current) => {
     $counter.innerText = `${current} / ${total}`;
 }
+
+
+
+
+
 
 const addZeros = numToConvert => {
     let num = numToConvert.toString();
@@ -56,7 +96,7 @@ const goNext = () => {
 
 document.querySelector('.back').addEventListener('click', goBack);
 document.querySelector('.next').addEventListener('click', goNext);
-myImage.addEventListener('click',goNext);
+myImage.addEventListener('click', goNext);
 
 body.addEventListener('keydown', function (event) {
     if (event.key === "ArrowRight") goNext();
