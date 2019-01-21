@@ -4,7 +4,8 @@
   "description": "```bash node golfSwing.js /Users/abrossault/Desktop/swing.mp4  00:00:06  00:00:04  swing04 ```",
   "main": "golfSwing.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "php -S localhost:3298/"
   },
   "keywords": [],
   "author": "",

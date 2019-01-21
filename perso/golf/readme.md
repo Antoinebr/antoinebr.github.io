@@ -21,6 +21,23 @@ To see the result serve the directories with your favorite tool
 
 If you have erorrs ( 404 ) don't forget to add a trailing slash at the end of the urls eg :```http://localhost:8087/swing01/``` 
 
+
+# Rotate images in bulk 
+
+Rotating images from the shell is easy with ImageMagick tools.
+
+To rotate 90 degrees clockwise and write output as new file:
+```
+$ convert -rotate "90" in.jpg out.jpg
+```
+
+To rotate 90 degrees counter-clockwise and overwrite the input file:
+
+```
+mogrify -rotate "-90" *.jpg 
+```
+
+
 # What you need 
 
 You need ffmpeg in your path, get it here : https://www.ffmpeg.org/download.html
