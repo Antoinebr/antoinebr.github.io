@@ -31,8 +31,10 @@ const howLong = moment.utc(moment(whenVideoEnd, 'HH:mm:ss').diff(moment(whenVide
 
 
     // Create a folder 
+ 
+
     // copy the master files in this folder
-    await execPromise(`cp -r master ${__dirname}/${folderName}`)
+    await execPromise(`cp -r ${__dirname}/master ${__dirname}/${folderName}`)
 
     // extract the frames 
     await execPromise(`ffmpeg -i ${videoFile} -ss ${whenVideoStart} -t ${howLong} -r 30/1 ${__dirname}/${folderName}/output%03d.jpg`)
