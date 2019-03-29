@@ -1,10 +1,8 @@
 {
-  "app.css": "app.2833250416d189f422d4.css",
-  "app.js": "app.bundle.d9a86aa089c97b7e1e8a.js",
-  "1.app.bundle.d9a86aa089c97b7e1e8a.js": "1.app.bundle.d9a86aa089c97b7e1e8a.js",
-  "2.app.bundle.d9a86aa089c97b7e1e8a.js": "2.app.bundle.d9a86aa089c97b7e1e8a.js",
+  "app.css": "app.e9780a68a6f8d16cc9c8.css",
+  "app.js": "app.bundle.8a71cabfe81460767532.js",
+  "1.app.bundle.8a71cabfe81460767532.js": "1.app.bundle.8a71cabfe81460767532.js",
+  "2.app.bundle.8a71cabfe81460767532.js": "2.app.bundle.8a71cabfe81460767532.js",
   "app.scss": "pattern.bd0f788.svg",
-  "index.html": "index.html",
-  "grid.html": "grid.html",
-  "typo.html": "typo.html"
+  "index.html": "index.html"
 }
