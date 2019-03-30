@@ -1,0 +1,68 @@
+
+@import "tools/clearfix";
+
+@font-face {
+    font-family: 'Pokemon';
+    src: url('../Pokemon-Classic.ttf') format('truetype');
+    font-style: normal;
+}
+
+
+
+
+body {
+    padding: 2%;
+    background: url('./pattern.svg');
+    font-family: sans-serif
+}
+
+.container {
+    width: 1200px;
+    max-width: 90%;
+    display: block;
+    margin: auto;
+}
+
+button {
+    width: 80%;
+    max-width: 300px;
+    height: 50px;
+    line-height: 50px;
+    background-color: #6eb40d;
+    font-size: 15px;
+    color: #FFF;
+
+    &:hover{
+        cursor : pointer;
+    }
+}
+
+
+.txt-Center {
+    text-align: center;
+}
+
+.display-block{
+    margin: auto;
+    display: block;
+}
+
+
+.cartige {
+    h2 {
+        color: rgb(11, 1, 37);
+        font-family: 'Pokemon';
+
+        b {
+            font-weight: 500;
+            font-size: 40px;
+        }
+    }
+}
+
+
+svg{
+    width: 300px;
+    display: block;
+    margin: auto;
+}

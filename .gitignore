@@ -1,20 +1,14 @@
-.DS_Store
+.git
 node_modules/
 
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+dploy.yaml
 
-# Editor directories and files
-.idea
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-.sass-cache 
+node_modules
 
+.sass-cache
 
-# Project specific
+.sass-cache/
 
-dist/
-*.sketch
+sass-cache/
+
+.DS_Store
