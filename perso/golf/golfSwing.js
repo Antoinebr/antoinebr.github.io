@@ -2,6 +2,9 @@ const mozjpeg = require('mozjpeg');
 
 const moment = require('moment');
 
+const fs = require('fs');
+const fg = require('fast-glob');
+
 const {
     exec,
     execFile
@@ -37,7 +40,8 @@ const howLong = moment.utc(moment(whenVideoEnd, 'HH:mm:ss').diff(moment(whenVide
     await execPromise(`cp -r ${__dirname}/master ${__dirname}/${folderName}`)
 
     // extract the frames 
-    await execPromise(`ffmpeg -i ${videoFile} -ss ${whenVideoStart} -t ${howLong} -r 30/1 ${__dirname}/${folderName}/output%03d.jpg`)
+    // await execPromise(`ffmpeg -i ${videoFile} -ss ${whenVideoStart} -t ${howLong} -r 30/1 ${__dirname}/${folderName}/output%03d.jpg`)
+    await execPromise(`ffmpeg -i ${videoFile} -ss ${whenVideoStart} -t ${howLong} ${__dirname}/${folderName}/output%03d.jpg`)
 
     // list the frame in a json
     await execPromise(`cd ${__dirname}/${folderName} && ls output* > ${__dirname}/${folderName}/list.txt`);
@@ -47,6 +51,10 @@ const howLong = moment.utc(moment(whenVideoEnd, 'HH:mm:ss').diff(moment(whenVide
     //await execFilePromise(mozjpeg, ['-outfile', `${__dirname}/${folderName}/output001.min.jpg`, `${__dirname}/${folderName}/output001.jpg`]);
 
     console.log(`\nGolf swing successfully generated 👍 \n${__dirname}/${folderName} \n  `);
+
+  
+
+    
 
 })()
 .catch(e => console.log(`ERROR :( ${e}`));

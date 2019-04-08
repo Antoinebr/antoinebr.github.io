@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>⛳️</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+    <h1>Antoine tries to play Golf </h1>
+
+    <main>
+
+    </main>
+
+    <style>
+        * {
+            font-family: sans-serif;
+        }
+
+        h1{
+            text-align: center;
+            font-size: 50px;
+        }
+
+        main{
+            display: grid; /* We set the grid */
+            grid-gap: 5px;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            
+        }
+
+        article {
+            border: solid grey 1px;
+            width: 200px;
+            grid-column: auto;
+            margin-bottom: 20px;
+
+        }
+
+        article h2 {
+            text-align: center;
+        }
+
+        article header {
+            height: 100px;
+
+            background-size: cover;
+            background-position: bottom;
+            background-repeat: no-repeat;
+        }
+
+        
+    </style>
+
+</body>
+
+<script>
+
+    const $main = document.querySelector('main');
+
+    (async () => {
+
+        const response = await fetch('./folderList.json');
+
+        // reponse is not correct
+        if (!response.ok) throw new Error(`We received an invalid response  ${await response.text()}`);
+
+        const reponseJson = await response.json();
+
+
+        for( const folder of reponseJson){
+
+            $main.insertAdjacentHTML("afterbegin",`
+            <a href="./${folder}">
+                <article>
+                    <header style="background-image: url(./${folder}/output001.jpg);"></header>
+                    <h2>${folder}</h2>
+                </article>
+            </a>
+            `);
+
+        }
+        
+
+    })()    
+    .catch(e => console.log('Something wrong happened', e));
+</script>
+
+</html>
