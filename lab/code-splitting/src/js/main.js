@@ -9,7 +9,7 @@ import highlight from '@css/lib/highlight.css';
 if (document.querySelector('.image-gallery')) {
 
 	// we dynamically import the module
-	import('simple-lightbox')
+	import(/* webpackChunkName: "simple-lightbox" */ 'simple-lightbox')
 		.then(sl => {
 
 			const SimpleLightbox = sl.default;
@@ -31,7 +31,7 @@ if ($form) {
 	// we dynamically import the module
 	(async () => {
 
-		const validator = await import('validator');
+		const validator = await import( /* webpackChunkName: "validator" */ 'validator');
 
 		$form.addEventListener('submit', function(e){
 			
@@ -57,7 +57,7 @@ if($code){
 	// we dynamically import the module
 	(async () => {
 
-		let hljs = await import('highlight.js');
+		let hljs = await import( /* webpackChunkName: "highlightJs" */'highlight.js');
 
 		hljs = hljs.default;
 

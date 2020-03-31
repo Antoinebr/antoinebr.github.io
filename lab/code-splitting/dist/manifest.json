@@ -1,10 +1,10 @@
 {
-  "app.css": "app.eac4aafdc7b264531184.css",
-  "app.js": "app.bundle.3afa05567e35b6fa2eb5.js",
-  "1.app.bundle.3afa05567e35b6fa2eb5.js": "1.app.bundle.3afa05567e35b6fa2eb5.js",
-  "2.app.bundle.3afa05567e35b6fa2eb5.js": "2.app.bundle.3afa05567e35b6fa2eb5.js",
-  "3.app.bundle.3afa05567e35b6fa2eb5.js": "3.app.bundle.3afa05567e35b6fa2eb5.js",
-  "app.scss": "pattern.6dfd531.svg",
+  "app.css": "app.479feb7090cefbb014c6.css",
+  "app.js": "app.bundle.9e542f7b01f1a71d3796.js",
+  "simple-lightbox.js": "simple-lightbox.chunk.cdff30b7caa0cea744e9.js",
+  "vendors~highlightJs.js": "vendors~highlightJs.chunk.c0a688b22e9fd7e34e08.js",
+  "vendors~validator.js": "vendors~validator.chunk.6e9a47a65045daa842c5.js",
+  "app.scss": "900f8add35323c44ee840c611ed9a7a5.ttf",
   "index.html": "index.html",
   "contact.html": "contact.html",
   "gallery.html": "gallery.html"

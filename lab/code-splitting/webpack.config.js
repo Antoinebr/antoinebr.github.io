@@ -31,7 +31,8 @@ const config = {
     },
     output: {
         path: path.resolve(__dirname, 'dist'), // the folder where we will output 
-        filename: 'app.bundle.[hash].js' // the file name with the hash at the end 
+        filename: 'app.bundle.[hash].js', // the file name with the hash at the end 
+        chunkFilename: '[name].chunk.[chunkhash].js'
     },
     resolve: {
 
