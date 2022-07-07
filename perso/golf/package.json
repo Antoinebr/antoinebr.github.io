@@ -12,7 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "fast-glob": "^2.2.6",
-    "moment": "^2.23.0",
+    "moment": "^2.29.4",
     "mozjpeg": "^6.0.1"
   }
 }
